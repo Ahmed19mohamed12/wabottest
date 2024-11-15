@@ -23,9 +23,9 @@ client.on('ready',  async () => {
 
     // Loop through the numbers and send messages
     for (let i = 0; i < parents.length; i++) {
-        //const media = MessageMedia.fromFilePath('C:\\Users\\abdel\\OneDrive\\Pictures\\desktop wallpaper\\1920x1080.jpg');
+        const media = MessageMedia.fromFilePath('1.jpg');
         let number = parents[i].number + '@c.us'; // Format the number
-        client.sendMessage(number,'أهلا وسهلا\n ♥♥ يا احمد')
+        client.sendMessage(number,media,{caption:'أهلا وسهلا\n ♥♥ يا احمد'})
             .then(response => {
                 console.log(`Message sent to ${number}:`, response);
             })
