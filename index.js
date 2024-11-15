@@ -1,73 +1,37 @@
-const { Client, LocalAuth } = require('whatsapp-web.js');
-
-const express = require('express');
-
-const app = express();
-
-
-// Create a new WhatsApp client instance
-
+const { Client, LocalAuth ,MessageMedia } = require('whatsapp-web.js');
+const qrcode = require('qrcode-terminal');
+const fs = require('fs');
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 const client = new Client({
-
     authStrategy: new LocalAuth() // Use LocalAuth for session management
-
 });
+
 client.on('qr', (qr) => {
-
-    console.log('QR Code generated, scan it with your phone:');
-
-    console.log(qr); // You can use a library to display this QR code in a web app
-
+    qrcode.generate(qr, {small: true});
+    console.log('QR RECEIVED', qr);
 });
 
-// Event when the client is ready
-
-client.on('ready', () => {
-
+client.on('ready',  async () => {
     console.log('Client is ready!');
 
-});
+    // Read the list of numbers from a JSON file
+    let parents = fs.readFileSync('parents.json');
+    parents = JSON.parse(parents);
 
-
-// Event when a message is received
-
-client.on('message', message => {
-
-    console.log('Received message:', message.body);
-
-    
-
-    // Example: Reply to the received message
-
-    if (message.body === 'Hello') {
-
-        message.reply('Hello! How can I help you?');
-
+    // Loop through the numbers and send messages
+    for (let i = 0; i < parents.length; i++) {
+        const media = MessageMedia.fromFilePath('C:\\Users\\abdel\\OneDrive\\Pictures\\desktop wallpaper\\1920x1080.jpg');
+        let number = parents[i].number + '@c.us'; // Format the number
+        client.sendMessage(number,media,{caption: 'أهلا وسهلا\n ♥♥ يا احمد'})
+            .then(response => {
+                console.log(`Message sent to ${number}:`, response);
+            })
+            .catch(err => {
+                console.error(`Failed to send message to ${number}:`, err);
+            });
+        await delay(5000);
+        
     }
-
 });
-
-
-// Start the client
 
 client.initialize();
-
-
-// Set up a basic Express server
-
-const PORT = process.env.PORT || 3000;
-
-app.get('/', (req, res) => {
-
-    res.send('WhatsApp Bot is running!');
-
-});
-
-
-// Start the Express server
-
-app.listen(PORT, () => {
-
-    console.log(`Server is running on port ${PORT}`);
-
-});
