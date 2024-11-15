@@ -1,5 +1,11 @@
 {
-    "scripts": {
+    "main": "index.js",
+
+      "scripts": {
         "start": "node index.js"
-    }
+      },
+        "dependencies": {
+            "express": "^4.21.1",
+            "whatsapp-web.js": "^1.26.0"
+          },
 }
