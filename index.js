@@ -3,7 +3,7 @@ const qrcode = require('qrcode-terminal');
 const express = require('express');
 const app = express();
 app.use(express.json());
-app.get("/send",(req,res)=>{
+app.post("/send",(req,res)=>{
      const data  = req.body;
      const message = data.message;
      const phone = data.phone;
