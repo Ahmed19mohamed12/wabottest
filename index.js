@@ -2,8 +2,14 @@ const { Client, LocalAuth ,MessageMedia } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 const express = require("express");
 const QRCode = require('qrcode');
+require('dotenv').config();
 const app = express();
 app.use(express.json());
+const SESSION_FILE_PATH = './session.json';
+let sessionCfg;
+if (fs.existsSync(SESSION_FILE_PATH)) {
+    sessionCfg = require(SESSION_FILE_PATH);
+}
 app.post("/send",(req,res)=>{
      const data  = req.body;
      const message = data['message'];
@@ -20,6 +26,15 @@ app.post("/send",(req,res)=>{
      
      
 })
+client.on('authenticated', (session) => {
+    console.log('AUTHENTICATED', session);
+    sessionCfg = session;
+    fs.writeFile(SESSION_FILE_PATH, JSON.stringify(session), (err) => {
+        if (err) {
+            console.error(err);
+        }
+    });
+});
 app.get('/auth', (req,res)=>{
      client.on('qr', async (qr) => {
          qrcode.generate(qr, {small: true});
