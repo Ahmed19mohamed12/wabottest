@@ -19,10 +19,10 @@ app.post("/send",(req,res)=>{
      
 })
 app.get('/auth', (req,res)=>{
-     client.on('qr', (qr) => {
+     client.on('qr', await (qr) => {
          qrcode.generate(qr, {small: true});
                // const url = req.query.url || 'https://example.com';
-               const qrCodeImage =  QRCode.toDataURL(qr);
+               const qrCodeImage = await QRCode.toDataURL(qr);
                res.send(`<img src="${qrCodeImage}" alt="QR Code"/>`);
                console.log(qr);
           });
