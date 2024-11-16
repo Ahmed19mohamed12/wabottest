@@ -5,8 +5,8 @@ const app = express();
 app.use(express.json());
 app.post("/send",(req,res)=>{
      const data  = req.body;
-     const message = data.message;
-     const phone = data.phone;
+     const message = data['message'];
+     const phone = data['phone'];
      res.status(200).send(message + " " + phone);
 })
 const fs = require('fs');
