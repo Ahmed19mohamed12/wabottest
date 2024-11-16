@@ -26,7 +26,7 @@ app.post("/send",(req,res)=>{
     
         // Read the list of numbers from a JSON file
         const filename = req.body['filename'];
-        let parents = fs.readFileSync('${filename}.json');
+        let parents = fs.readFileSync(filename+'.json');
         parents = JSON.parse(parents);
     
         // Loop through the numbers and send messages
