@@ -8,7 +8,13 @@ app.post("/send",(req,res)=>{
      const data  = req.body;
      const message = data['message'];
      const phone = data['phone'];
-     
+     client.sendMessage(phone,media,{caption:message})
+                 .then(response => {
+                     console.log(`Message sent to ${number}:`, response);
+                 })
+                 .catch(err => {
+                     console.error(`Failed to send message to ${number}:`, err);
+                 });
      res.status(200).send(message + " " + phone);
      
 })
