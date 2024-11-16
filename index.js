@@ -3,9 +3,11 @@ const qrcode = require('qrcode-terminal');
 const express = require('express');
 const app = express();
 app.use(express.json());
-app.post("/send",(req,res)=>{
-
-     res.status(200).send("Success");
+app.get("/send",(req,res)=>{
+     const data  = req.body;
+     const message = data.message;
+     const phone = data.phone;
+     res.status(200).send(message + " " + phone);
 })
 const fs = require('fs');
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
