@@ -2,6 +2,8 @@ const { Client, LocalAuth ,MessageMedia } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 const express = require("express");
 const QRCode = require('qrcode');
+const fs = require('fs');
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 require('dotenv').config();
 const app = express();
 app.use(express.json());
@@ -10,6 +12,13 @@ let sessionCfg;
 if (fs.existsSync(SESSION_FILE_PATH)) {
     sessionCfg = require(SESSION_FILE_PATH);
 }
+const client = new Client({
+    puppeteer: {
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
+    },
+    session: sessionCfg,
+    authStrategy: new LocalAuth() // Use LocalAuth for session management
+});
 app.post("/send",(req,res)=>{
      const data  = req.body;
      const message = data['message'];
@@ -67,16 +76,6 @@ app.get('/auth', (req,res)=>{
          }
      });
 })
-const fs = require('fs');
-const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-const client = new Client({
-    puppeteer: {
-        args: ['--no-sandbox', '--disable-setuid-sandbox']
-    },
-    authStrategy: new LocalAuth() // Use LocalAuth for session management
-});
-
-
 app.listen(3000, () => {
     console.log("Started on port 3000");
      client.initialize();
