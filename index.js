@@ -1,6 +1,7 @@
 const { Client, LocalAuth ,MessageMedia } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 const express = require('express');
+const QRCode = require('qrcode');
 const app = express();
 app.use(express.json());
 app.post("/send",(req,res)=>{
