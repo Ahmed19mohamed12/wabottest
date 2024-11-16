@@ -26,14 +26,15 @@ app.post("/send",(req,res)=>{
     
         // Read the list of numbers from a JSON file
         const filename = req.body['filename'];
+        const message = req.body['message'];
         let parents = fs.readFileSync(filename+'.json');
         parents = JSON.parse(parents);
     
         // Loop through the numbers and send messages
-        for (let i = 0; i < parents.length; i++) {
+        for (let i = 0; i <= parents.length; i++) {
             const media = MessageMedia.fromFilePath('1.jpg');
             let number = parents[i].number + '@c.us'; // Format the number
-            client.sendMessage(number,media,{caption:'أهلا وسهلا\n ♥♥ يا احمد'})
+            client.sendMessage(number,media,{caption:message})
                 .then(response => {
                     console.log(`Message sent to ${number}:`, response);
                 })
