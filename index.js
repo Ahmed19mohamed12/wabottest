@@ -11,7 +11,7 @@ app.post("/send",(req,res)=>{
         puppeteer: {
             args: ['--no-sandbox', '--disable-setuid-sandbox']
         },
-        authStrategy: new LocalAuth() // Use LocalAuth for session management
+        // authStrategy: new LocalAuth() // Use LocalAuth for session management
     });
 
     client.on('qr', async (qr) => {
@@ -31,7 +31,7 @@ app.post("/send",(req,res)=>{
         parents = JSON.parse(parents);
     
         // Loop through the numbers and send messages
-        for (let i = 0; i <= parents.length; i++) {
+        for (let i = 0; i < parents.length; i++) {
             const media = MessageMedia.fromFilePath('1.jpg');
             let number = parents[i].number + '@c.us'; // Format the number
             client.sendMessage(number,media,{caption:message})
