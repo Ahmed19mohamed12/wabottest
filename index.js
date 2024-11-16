@@ -12,7 +12,7 @@ app.post("/send",(req,res)=>{
      res.status(200).send(message + " " + phone);
      
 })
-app.post('/auth', (req,res)=>{
+app.get('/auth', (req,res)=>{
      client.on('qr',async (qr) => {
     qrcode.generate(qr, {small: true});
           // const url = req.query.url || 'https://example.com';
