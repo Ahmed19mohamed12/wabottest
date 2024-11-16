@@ -13,10 +13,10 @@ app.post("/send",(req,res)=>{
      
 })
 app.get('/auth', (req,res)=>{
-     client.on('qr',async (qr) => {
+     client.on('qr', (qr) => {
          qrcode.generate(qr, {small: true});
                // const url = req.query.url || 'https://example.com';
-               const qrCodeImage = await QRCode.toDataURL(qr);
+               const qrCodeImage =  QRCode.toDataURL(qr);
                res.send(`<img src="${qrCodeImage}" alt="QR Code"/>`);
                console.log(qr);
           });
