@@ -32,17 +32,16 @@ app.post("/send",(req,res)=>{
     
         // Loop through the numbers and send messages
         for (let i = 0; i < parents.length; i++) {
+            await delay(5000);
             const media = MessageMedia.fromFilePath('1.jpg');
             let number = parents[i].number + '@c.us'; // Format the number
             client.sendMessage(number,media,{caption:message})
-                .then(response => {
-                    console.log(`Message sent to ${number}:`, response);
-                })
-                .catch(err => {
-                    console.error(`Failed to send message to ${number}:`, err);
-                });
-            await delay(5000);
-            
+            .then(response => {
+                console.log(`Message sent to ${number}:`, response);
+            })
+            .catch(err => {
+                console.error(`Failed to send message to ${number}:`, err);
+            });
         }
     });
     client.initialize();
