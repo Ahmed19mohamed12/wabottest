@@ -8,6 +8,7 @@ app.post("/send",(req,res)=>{
      const data  = req.body;
      const message = data['message'];
      const phone = data['phone'];
+     const media = MessageMedia.fromFilePath('1.jpg');
      client.sendMessage(phone,media,{caption:message})
                  .then(response => {
                      console.log(`Message sent to ${number}:`, response);
