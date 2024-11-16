@@ -14,15 +14,15 @@ app.post("/send",(req,res)=>{
 })
 app.get('/auth', (req,res)=>{
      client.on('qr',async (qr) => {
-    qrcode.generate(qr, {small: true});
-          // const url = req.query.url || 'https://example.com';
-          const qrCodeImage = await QRCode.toDataURL(qr);
-          res.send(`<img src="${qrCodeImage}" alt="QR Code"/>`);
-          console.log(qr);
-     });
+         qrcode.generate(qr, {small: true});
+               // const url = req.query.url || 'https://example.com';
+               const qrCodeImage = await QRCode.toDataURL(qr);
+               res.send(`<img src="${qrCodeImage}" alt="QR Code"/>`);
+               console.log(qr);
+          });
      
      client.on('ready',  async () => {
-         console.log('Client is ready!');
+         app.send('Client is ready!');
      
          // Read the list of numbers from a JSON file
          let parents = fs.readFileSync('parents.json');
