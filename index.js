@@ -7,7 +7,7 @@ const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 require('dotenv').config();
 const app = express();
 app.use(express.json());
-const SESSION_FILE_PATH = './session.json';
+const SESSION_FILE_PATH = 'session.json';
 let sessionCfg;
 if (fs.existsSync(SESSION_FILE_PATH)) {
     sessionCfg = require(SESSION_FILE_PATH);
