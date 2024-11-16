@@ -44,9 +44,10 @@ app.post("/send",(req,res)=>{
         }
     });
     
-    client.initialize();
-    res.status(200).send("Success");
+    
+    // res.status(200).send("Success");
 })
 app.listen(3000, () => {
+    client.initialize();
     console.log("Started on port 3000");
 });
