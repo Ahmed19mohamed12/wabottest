@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 app.post("/send",(req,res)=>{
 
-    // res.status(200).send("Success");
+     res.status(200).send("Success");
 })
 const fs = require('fs');
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
