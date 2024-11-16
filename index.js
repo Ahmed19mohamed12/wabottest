@@ -11,12 +11,13 @@ app.post("/send",(req,res)=>{
      const media = MessageMedia.fromFilePath('1.jpg');
      client.sendMessage(phone,media,{caption:message})
                  .then(response => {
-                     console.log(`Message sent to ${number}:`, response);
+                     console.log(`Message sent to ${phone}:`, response);
+                      res.status(200).send(message + " " + phone);
                  })
                  .catch(err => {
-                     console.error(`Failed to send message to ${number}:`, err);
+                     console.error(`Failed to send message to ${phone}:`, err);
                  });
-     res.status(200).send(message + " " + phone);
+     
      
 })
 app.get('/auth', (req,res)=>{
