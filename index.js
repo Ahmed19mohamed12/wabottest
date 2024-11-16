@@ -1,5 +1,12 @@
 const { Client, LocalAuth ,MessageMedia } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
+const express = require('express');
+const app = express();
+app.use(express.json());
+app.post("/send",(req,res)=>{
+
+    // res.status(200).send("Success");
+})
 const fs = require('fs');
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 const client = new Client({
@@ -38,3 +45,6 @@ client.on('ready',  async () => {
 });
 
 client.initialize();
+app.listen(3000, () => {
+    console.log("Started on port 3000");
+});
