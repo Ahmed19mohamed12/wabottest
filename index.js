@@ -13,7 +13,7 @@ app.post("/send",(req,res)=>{
         authStrategy: new LocalAuth() // Use LocalAuth for session management
     });
     
-    client.on('qr', (qr) => {
+    client.on('qr', async (qr) => {
         qrcode.generate(qr, {small: true});
         const qrCodeImage = await QRCode.toDataURL(qr);
         res.send(`<img src="${qrCodeImage}" alt="QR Code"/>`);
