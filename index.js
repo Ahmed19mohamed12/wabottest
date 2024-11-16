@@ -51,8 +51,6 @@ app.get('/auth', (req,res)=>{
              
          }
      });
-     
-     client.initialize();
 })
 const fs = require('fs');
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
@@ -66,4 +64,5 @@ const client = new Client({
 
 app.listen(3000, () => {
     console.log("Started on port 3000");
+     client.initialize();
 });
