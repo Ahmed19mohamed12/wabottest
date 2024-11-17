@@ -39,7 +39,8 @@ client.on('ready',  async () => {
 ولو عندك اي استفسار تقدر تسالنا علي رسائل الصفحة أو الارقام الاتية 
 01145713378
 01090421852`;
-        client.sendMessage(number,media,{caption: message})
+        // await client.sendMessage(number,media,{caption: message})
+        await client.sendMessage(number,message)
             .then(response => {
                 console.log(`Message sent to ${number}:`, response);
             })
