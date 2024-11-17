@@ -21,7 +21,7 @@ const client = new Client({
 
 
 client.on('qr', (qr) => {
-
+    console.log(qr);
     qrcode.generate(qr, { small: true });
 
 console.log('QR Code generated, scan it with your WhatsApp app.');
