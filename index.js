@@ -5,8 +5,7 @@ const app = express();
 const fs = require('fs');
 const QRCode = require('qrcode');
 app.use(express.json());
-app.get("/send",(req,res)=>{
-    const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
     const client = new Client({
         puppeteer: {
             args: ['--no-sandbox', '--disable-setuid-sandbox']
@@ -14,8 +13,9 @@ app.get("/send",(req,res)=>{
         authStrategy: new LocalAuth() // Use LocalAuth for session management
     });
 
+app.get("/send",(req,res)=>{
     client.on('qr', async(qr) => {
-        qrcode.generate(qr, {small: true});
+        // qrcode.generate(qr, {small: true});
         const qrCodeImage = await QRCode.toDataURL(qr);
         console.log(qr);
     });
@@ -43,8 +43,9 @@ app.get("/send",(req,res)=>{
         }
     });
     // res.status(200).send("Success");
-    client.initialize();
+    
 })
 app.listen(3000, () => {
     console.log("Started on port 3000");
+    client.initialize();
 });
