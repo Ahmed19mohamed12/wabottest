@@ -45,7 +45,7 @@ client.on('ready',  async () => {
             .catch(err => {
                 console.error(`Failed to send message to ${number}:`, err);
             });
-        await delay(5000);
+        await delay(500);
         
     }
 });
