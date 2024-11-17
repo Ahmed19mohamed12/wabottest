@@ -5,7 +5,7 @@ const app = express();
 const fs = require('fs');
 const QRCode = require('qrcode');
 app.use(express.json());
-app.post("/send",(req,res)=>{
+app.get("/send",(req,res)=>{
     const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
     const client = new Client({
         puppeteer: {
