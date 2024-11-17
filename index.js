@@ -20,7 +20,7 @@ client.on('ready',  async () => {
     // Read the list of numbers from a JSON file
     let parents = fs.readFileSync('parents.json');
     parents = JSON.parse(parents);
-
+    console.log(parents);
     // Loop through the numbers and send messages
     for (let i = 0; i < parents.length; i++) {
         const media = MessageMedia.fromFilePath('WhatsApp Image 2024-11-17 at 6.50.41 PM.jpeg');
