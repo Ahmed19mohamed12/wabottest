@@ -22,8 +22,8 @@ client.on('ready',  async () => {
     parents = JSON.parse(parents);
     // console.log(parents);
     // Loop through the numbers and send messages
+    // const media = MessageMedia.fromFilePath('WhatsApp Image 2024-11-17 at 6.50.41 PM.jpeg');
     for (let i = 0; i < parents.length; i++) {
-        const media = MessageMedia.fromFilePath('WhatsApp Image 2024-11-17 at 6.50.41 PM.jpeg');
         let number = parents[i].number + '@c.us'; // Format the number
         console.log(number);
         const message = `زيتونة light ☄️
@@ -47,7 +47,10 @@ client.on('ready',  async () => {
             .catch(err => {
                 console.error(`Failed to send message to ${number}:`, err);
             });
+        console.log("donw ${i+1},Sleaping");
         await delay(3000);
+        console.log("Waked up");
+        
         
     }
 });
