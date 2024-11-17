@@ -3,6 +3,9 @@ const qrcode = require('qrcode-terminal');
 const fs = require('fs');
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 const client = new Client({
+    puppeteer: {
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
+    },
     authStrategy: new LocalAuth() // Use LocalAuth for session management
 });
 
