@@ -45,11 +45,22 @@ let contacts = fs.readFileSync('parents.json');
 
     for (let i = 0; i < contacts.length; i++) {
 
-        const media = MessageMedia.fromFilePath('1.jpg'); // Update with your media path
+        const media = MessageMedia.fromFilePath('WhatsApp Image 2024-11-18 at 7.57.24 PM.jpeg'); // Update with your media path
 
         let number = contacts[i].number + '@c.us'; // Format the number
 
-        const message = `Hello, this is a message `; // Customize your message
+        const message = `الفرصة الأخيرة لكل طلبة تالتة ثانوي 🫵
+مراجعة نصف شابتر 2 🔥 
+اي طالب متسوح في شابتر 2 ف هي دي الحصة اللي هتلملك الدنيا كلها عشان هنراجع فيها سواء كان شرح أو حل 
+
+Flux lines 
+St wire 
+Circular coil 
+solonid 
++ 
+حل على كل جزء منفصل ❤️ 
+معادنا بكرة بإذن الله الساعة ١٢ ظهرا في سنتر ليرن المهندسين 💪🔥 
+في انتظاركم ياابطال 💪❤️`; // Customize your message
 
 
         try {
