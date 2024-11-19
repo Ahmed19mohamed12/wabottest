@@ -77,7 +77,7 @@ let contacts = fs.readFileSync('parents.json');
         }
 
 
-        await delay(1000); // Delay to avoid rate limiting
+        await delay(6000); // Delay to avoid rate limiting
 
     }
 
