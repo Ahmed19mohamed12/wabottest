@@ -45,7 +45,7 @@ let contacts = fs.readFileSync('parents.json');
 
     for (let i = 0; i < contacts.length; i++) {
 
-        const media = MessageMedia.fromFilePath('WhatsApp Image 2024-11-17 at 6.50.41 PM.jpeg'); // Update with your media path
+        const media = MessageMedia.fromFilePath('WhatsApp Image 2024-11-20 at 11.13.23 PM.jpeg'); // Update with your media path
 
         let number = contacts[i].number + '@c.us'; // Format the number
 
@@ -54,9 +54,9 @@ let contacts = fs.readFileSync('parents.json');
 اهم واقوى مراجعة علي chapter 2 🔥 
 تلتين المنهج في جيبك 👌🧐
 خليك جاهز ومستنينك في المواعيد اللي موجودة 👇
-معادنا في سنتر كوليدج جولد 💪 
-📆يوم الاربعاء  الموافق ٢٠ نوفمبر 
-ا 🕰️ الساعة ٦ ونص مساءا 
+معادنا في سنتر k 💪 
+📆يوم الخميس  الموافق ٢١ نوفمبر 
+ا 🕰️ الساعة ٤ ونص مساءا
 
 
 ولو عندك اي استفسار تقدر تسالنا علي رسائل الصفحة أو الارقام الاتية 
