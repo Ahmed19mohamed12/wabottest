@@ -32,7 +32,7 @@ console.log('QR Code generated, scan it with your WhatsApp app.');
 client.on('ready', async () => {
 
     console.log('Client is ready!');
-
+    await delay(20000);
 
     // Read the list of numbers from a JSON file
 
