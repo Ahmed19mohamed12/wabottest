@@ -58,7 +58,7 @@ let contacts = fs.readFileSync('parents.json');
 
         try {
 
-            const response = await client.sendMessage(number, media, { caption: message });
+            const response = await client.sendMessage(number,message);
 
             console.log(`Message sent to ${number}:`, response);
 
