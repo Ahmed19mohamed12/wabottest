@@ -49,7 +49,7 @@ let contacts = fs.readFileSync('parents.json');
 
         let number = contacts[i].number + '@c.us'; // Format the number
 
-        const message = `زيتونةالسلام عليكم ولي امر الطالب / ${name} ❤️
+        const message = `السلام عليكم ولي امر الطالب / ${name} ❤️
 معاد الحصة الجاية بكرا ان شاءالله الساعة 5 ياريت بدون تأخير ⏰ 
 درجة الحصة الي فاتت ${mark}
 
