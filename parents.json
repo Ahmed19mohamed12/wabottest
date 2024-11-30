@@ -1,25 +1,9 @@
 [
-    {"number":"201117006137","name":"Noor Mohamed","mark":"8/10"}
-    {"number":"201063654465","name":"Haneen Osama","mark":"8.5/10"}
-    {"number":"201011777982","name":"Youssef Alaa","mark":"5/10"}
-    {"number":"201141597902","name":"Omar Mostafa Abd ElAzeem","mark":"6/10"}
-    {"number":"201115148023","name":"Noor Diaa","mark":"10/10"}
-    {"number":"201018593672","name":"Brehan  ","mark":"7.5/10"}
-    {"number":"201018593672","name":"Maya  ","mark":"8.5/10"}
-    {"number":"201069181935","name":"Ahmed Hossam Higazy","mark":"6.5/10"}
-    {"number":"201226151225","name":"Badr Ashraf","mark":"5.5/10"}
-    {"number":"201122399968","name":"Mohamed Sameh","mark":"3.5/10"}
-    {"number":"201128817710","name":"Jana Mahmoud Ahmed","mark":"8.5/10"}
-    {"number":"201227961975","name":"Mirola Saad","mark":"7.5/10"}
-    {"number":"201126459463","name":"Jana Tamer","mark":"6.5/10"}
-    {"number":"201070999720","name":"Omar Alaa","mark":"4/10"}
-    {"number":"201013191291","name":"Mohamed Ehab","mark":"6.5/10"}
-    {"number":"201012049619","name":"Ali Mohamed Ali","mark":"6.5/10"}
-    {"number":"20113988179","name":"Mohamed Hany","mark":"6.5/10"}
-    {"number":"201016816974","name":"Zeiad Walid","mark":"6/10"}
-    {"number":"","name":"Jana Haythm","mark":"7.5/10"}
-    {"number":"","name":"Farida Amr","mark":"7.5/10"}
-    {"number":"201001150911","name":"Ali ElDien Mohamed","mark":"8/10"}
-    {"number":"201066031992","name":"Kareem Mohamed","mark":"5.5/10"}
-    {"number":"201012572531","name":"Nashat Reda","mark":"6/10"}
+    {"number":"201097852065","name":"Malak Mostafa","mark":"9/10"},
+    {"number":"201140603646","name":"Menna Allah Mohamed","mark":"8/10"},
+    {"number":"201063654465","name":"Jana Osama","mark":"8/10"},
+    {"number":"201200187000","name":"Zeiad Ramy","mark":"7/10"},
+    {"number":"201003616998","name":"Noor ElDien Khaled","mark":"7/10"},
+    {"number":"201158883879","name":"Yehia Abd El Reheem","mark":"8/10"},
+    {"number":"201141140330","name":"Hagar Seoudy","mark":"9/10"}
 ]
