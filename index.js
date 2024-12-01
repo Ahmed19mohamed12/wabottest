@@ -48,7 +48,8 @@ let contacts = fs.readFileSync('parents.json');
         const media = MessageMedia.fromFilePath('WhatsApp Image 2024-11-20 at 11.13.23 PM.jpeg'); // Update with your media path
 
         let number = contacts[i].number + '@c.us'; // Format the number
-
+        let name = contacts[i].name;
+        let mark = contacts[i].mark;
         const message = `السلام عليكم ولي امر الطالب / ${name} ❤️
 معاد الحصة الجاية بكرا ان شاءالله الساعة 7 ياريت بدون تأخير ⏰ 
 درجة الحصة الي فاتت ${mark}
