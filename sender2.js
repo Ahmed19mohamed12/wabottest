@@ -36,7 +36,7 @@ client.on('ready', async () => {
 
     // Read the list of numbers from a JSON file
 
-let contacts = fs.readFileSync('parents.json');
+let contacts = fs.readFileSync('numbers.json');
 
     contacts = JSON.parse(contacts);
 
