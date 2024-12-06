@@ -44,8 +44,8 @@ let contacts = fs.readFileSync('parents.json');
     // Loop through the numbers and send messages
 
     for (let i = 0; i < contacts.length; i++) {
-
-        const media = MessageMedia.fromFilePath('Round 2.png'); // Update with your media path
+        try{
+            const media = MessageMedia.fromFilePath('Round 2.png'); // Update with your media path
         let number = contacts[i].number;
         if(Number.isInteger(parseInt(number))){
             let number2 = contacts[i].number + '@c.us'; // Format the number
@@ -101,7 +101,9 @@ Location ⬇️⬇️
     
     
             await delay(6000); // Delay to avoid rate limiting
-
+        }
+        }catch(e){
+            print(e);
         }
     }
 
