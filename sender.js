@@ -45,11 +45,33 @@ let contacts = fs.readFileSync('parents.json');
 
     for (let i = 0; i < contacts.length; i++) {
         try{
-            const media = MessageMedia.fromFilePath('Round 2.png'); // Update with your media path
+            const media = MessageMedia.fromFilePath('WhatsApp Image 2024-12-08 at 3.02.20 PM.jpeg'); // Update with your media path
         let number = contacts[i].number;
         if(Number.isInteger(parseInt(number))){
             let number2 = contacts[i].number + '@c.us'; // Format the number
-            const message = ``; // Customize your message
+            const message = `Second Secondary students 🚨🚨
+….
+الحمدلله المنهج خلص و وقت  كورس الإنقاذ بداء 🫣🫣
+-سواء ان كنت راكن المادة و مذاكرتهاش
+-سواء ان كنت نسيت القديم علشان انشغلت في الجديد 
+- سواء إن كنت من الطلبة الليً محتاجة ال high level tricks 
+- سواء إن كنت مش من طلابنا و عندك مشاكل و حابب تنضم لينا  😉 
+……
+فدة وقتك يابطل 🫶🏻🫶🏻 
+كل اللي مطلوب منك تمشي على الplan بالظبط 👌👌 
+… 
+نبداء بقى ب task 1 🫣🫣
+دا يا معلم فيديو شرح المنهج كله في ٣ ساعات فقط لا غير 🫣
+https://youtu.be/HqOCP1mLxH8
+
+تقدر تسالنا عن التفاصيل علي الارقام التاليه 
+01145713378
+01090421852
+
+او سجل علي الفورم  التالية 👇
+https://forms.gle/27EgzAms2KPWbY8t6
+
+ومتنساش تسالنا عن المفاجأة لما تجيب صحابك الحصة 😉`; // Customize your message
     
     
             try {
