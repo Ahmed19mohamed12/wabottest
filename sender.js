@@ -45,7 +45,7 @@ let contacts = fs.readFileSync('parents.json');
 
     for (let i = 0; i < contacts.length; i++) {
         try{
-            const media = MessageMedia.fromFilePath('WhatsApp Image 2024-12-09 at 3.24.50 PM.jpeg'); // Update with your media path
+            const media = MessageMedia.fromFilePath('WhatsApp Image 2024-12-10 at 3.55.07 PM.jpeg'); // Update with your media path
         let number = contacts[i].number;
         if(Number.isInteger(parseInt(number))){
             let number2 = contacts[i].number + '@c.us'; // Format the number
