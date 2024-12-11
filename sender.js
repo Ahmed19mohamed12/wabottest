@@ -45,7 +45,7 @@ let contacts = fs.readFileSync('parents.json');
 
     for (let i = 0; i < contacts.length; i++) {
         try{
-            const media = MessageMedia.fromFilePath('WhatsApp Image 2024-12-10 at 3.55.07 PM.jpeg'); // Update with your media path
+            const media = MessageMedia.fromFilePath('WhatsApp Image 2024-12-10 at 8.21.24 PM.jpeg'); // Update with your media path
         let number = contacts[i].number;
         if(Number.isInteger(parseInt(number))){
             let number2 = contacts[i].number + '@c.us'; // Format the number
@@ -63,8 +63,8 @@ let contacts = fs.readFileSync('parents.json');
 نبداء بقى ب task 1 🫣🫣
 دا يا معلم فيديو شرح المنهج كله في ٣ ساعات فقط لا غير 🫣
 https://youtu.be/HqOCP1mLxH8
-معادنا في سنتر فيوتشر اكاديمي - ATP في شبرا
-يوم الجمعة الساعة ٢ عصرا ❤️
+معادنا في سنتر  k في الف مسكن
+يوم الخميس الساعة ٤ ونص مساءا ❤️
 تقدر تسالنا عن التفاصيل علي الارقام التاليه 
 01145713378
 01090421852
