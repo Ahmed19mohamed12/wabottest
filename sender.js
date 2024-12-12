@@ -45,7 +45,7 @@ let contacts = fs.readFileSync('parents.json');
 
     for (let i = 0; i < contacts.length; i++) {
         try{
-            const media = MessageMedia.fromFilePath('WhatsApp Image 2024-12-10 at 8.21.24 PM.jpeg'); // Update with your media path
+            const media = MessageMedia.fromFilePath('WhatsApp Image 2024-12-12 at 2.57.02 AM.jpeg'); // Update with your media path
         let number = contacts[i].number;
         if(Number.isInteger(parseInt(number))){
             let number2 = contacts[i].number + '@c.us'; // Format the number
@@ -72,8 +72,7 @@ https://youtu.be/HqOCP1mLxH8
 او سجل علي الفورم  التالية 👇
 https://forms.gle/27EgzAms2KPWbY8t6
 
-ومتنساش تسالنا عن المفاجأة لما تجيب صحابك الحصة 😉
-';
+ومتنساش تسالنا عن المفاجأة لما تجيب صحابك الحصة 😉';
     
     
             try {
