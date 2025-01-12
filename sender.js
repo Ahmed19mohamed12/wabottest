@@ -49,7 +49,7 @@ let contacts = fs.readFileSync('parents.json');
         let number = contacts[i].number;
         if(Number.isInteger(parseInt(number))){
             let number2 = contacts[i].number + '@c.us'; // Format the number
-            const message = ' ازيكم يا شباب عاملين اية ♥️
+            const message = ' شايفك ياللي قاعد متسوح ومش عارفها تلم المادة ازاي 🧐
 
 دا فيديو مراجعة امتحان كامل عشان تاخد علي مود الامتحان 
 ( الامتحان في افكار عالية جدا ) 
