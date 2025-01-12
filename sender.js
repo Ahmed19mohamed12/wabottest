@@ -45,7 +45,7 @@ let contacts = fs.readFileSync('parents.json');
 
     for (let i = 0; i < contacts.length; i++) {
         try{
-            const media = MessageMedia.fromFilePath('IMG-20250110-WA0000.jpg'); // Update with your media path
+            const media = MessageMedia.fromFilePath('3ff0e57c-6c48-4ab5-8078-eb7eabf1ab95.jpeg'); // Update with your media path
         let number = contacts[i].number;
         if(Number.isInteger(parseInt(number))){
             let number2 = contacts[i].number + '@c.us'; // Format the number
