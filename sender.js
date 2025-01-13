@@ -45,34 +45,32 @@ let contacts = fs.readFileSync('parents.json');
 
     for (let i = 0; i < contacts.length; i++) {
         try{
-            const media = MessageMedia.fromFilePath('3ff0e57c-6c48-4ab5-8078-eb7eabf1ab95.jpeg'); // Update with your media path
+            const media = MessageMedia.fromFilePath('IMG-20250113-WA0000.jpg'); // Update with your media path
         let number = contacts[i].number;
         if(Number.isInteger(parseInt(number))){
             let number2 = contacts[i].number + '@c.us'; // Format the number
-            const message = ` شايفك ياللي قاعد متسوح ومش عارفها تلم المادة ازاي 🧐
+            const message = `طلاب تانية ثانوي 💪 
+في جميع أنحاء الجمهورية 📢
+مستر أحمد عبد المنعم 👌
+عاملك طريقين لمراجعة ليلة الامتحان وكلهم مجانا علي اليوتيوب 🔥🔥
+الطريق الاول 👇 
+⛔ لو انت عاوز فيديو واحد يلملك المنهج كله ف كل اللي عليك تشوف الفيديو دا 👇 
+https://youtu.be/HqOCP1mLxH8?si=eB0bDPXX1B9UBALp
 
-دا فيديو مراجعة امتحان كامل عشان تاخد علي مود الامتحان 
-( الامتحان في افكار عالية جدا ) 
-https://youtu.be/xmJTd8zkIYY
+وتتفرج علي فيديوهات حل امتحانات اللي موجودة 👇 
+https://youtube.com/playlist?list=PLdCOTWj2D0j2SJPrxpYlkQjGN-6NXJiSx&si=C3zmzRhe1Dii5onh
 
-طيب انت محتاج تراجع علي حاجة من الشرح ف دا شرح المنهج كامل معاك
-شرح شابتر 1
-https://www.youtube.com/playlist?list=PLdCOTWj2D0j25DOkTlNFrlegJK_2DT2qj
+طيب لو انت عاوز فيديوهات شرح تفصيلي ف برضو عملتلك بلاي ليست فيها تقريبا كل حاجة تخص المنهج بالتفاصيل 👇
+https://youtube.com/playlist?list=PLdCOTWj2D0j1pm-BtKVOmucB1e1HdKUCK&si=PACGV654su9M5T-s
 
-شرح شابتر 2
- https://www.youtube.com/playlist?list=PLdCOTWj2D0j0GKw5O_TdU5r__Wwe1vlnm
+وبرضو تتفرج علي حل امتحانات ليلة الامتحان 
+https://youtube.com/playlist?list=PLdCOTWj2D0j2SJPrxpYlkQjGN-6NXJiSx&si=C3zmzRhe1Dii5onh
 
-شرح شابتر 3 
- https://www.youtube.com/playlist?list=PLdCOTWj2D0j3WjM9bshSWnwqGmRvWVjYk
-
-شرح شابتر 4 https://www.youtube.com/playlist?list=PLdCOTWj2D0j2-lTW_vkx22EXdTjvbq8Pd
-
-و لو محتاج هبعتلك pdf في حل امتحان الوزراة منزلاه بالحل بتاعه
-
-ملحوظة هامة جدا 
-اي حد عنده سؤال في أي حاجة يبعت فورا 
-
-ربنا معاكم يارب`;
+ومتنساش يا صديقي 🤔
+مواعيد ليالي الامتحان في السناتر 
+يوم الثلاثاء 14 يناير 
+الساعة 12 ظهرا في سنتر كوليدج جولد  💪
+الساعة 3:30 في سنتر ليرن المهندسين 💪`;
     
             try {
     
